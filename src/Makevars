@@ -1,6 +1,7 @@
 RTENS_CPPFLAGS=-std=c++11
-RTENS_LIBS=-ltensorflow
+RTENS_INCLUDE=-I ../inst/libtensorflow/include
+RTENS_LIBS=-ltensorflow -L ../inst/libtensorflow/lib
 
 
-PKG_CPPFLAGS=$(RTENS_CPPFLAGS) 
+PKG_CPPFLAGS=$(RTENS_CPPFLAGS) $(RTENS_INCLUDE)
 PKG_LIBS=$(RTENS_LIBS)

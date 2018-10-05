@@ -179,6 +179,8 @@ BEGIN_RCPP
 END_RCPP
 }
 
+RcppExport SEXP TF_GetAllOpList();
+
 static const R_CallMethodDef CallEntries[] = {
     {"_rtensorflow_c_initializeSessionVariables", (DL_FUNC) &_rtensorflow_c_initializeSessionVariables, 0},
     {"_rtensorflow_c_loadGraphFromFile", (DL_FUNC) &_rtensorflow_c_loadGraphFromFile, 1},
@@ -195,6 +197,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_rtensorflow_catchError", (DL_FUNC) &_rtensorflow_catchError, 0},
     {"_rtensorflow_getErrorMessage", (DL_FUNC) &_rtensorflow_getErrorMessage, 0},
     {"_rtensorflow_getOpProperties", (DL_FUNC) &_rtensorflow_getOpProperties, 1},
+    {"TF_GetAllOpList",                           (DL_FUNC) &TF_GetAllOpList,                           0},
     {NULL, NULL, 0}
 };
 
